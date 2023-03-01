@@ -3,6 +3,14 @@ title: "A3: SPL Library Checkouts"
 output: html_document
 ---
 
+```{R}
+library(dplyr)
+source("Chart_1.R")
+source("Chart_2.R")
+source("Chart_3.R")
+source("Summary.R")
+```
+
 ### Introduction
 
 
@@ -116,7 +124,7 @@ For other months, it's all about the same times.
 I can see this may probably due to many people make their new year reading plan at the very beginning.
 
 So that many people will rent at January and they didn't successfully persist that long. 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+``````{r, echo = FALSE,warning = FALSE}
 Chart2
 ```
 
@@ -136,8 +144,7 @@ I think its also becasue of COVID pandemic. Many people don't want to use physic
 
 Therefore, everything digitalize during that two years.
 
-``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+``````{r, echo = FALSE, warning = FALSE}
 Chart3
 ```
-
 

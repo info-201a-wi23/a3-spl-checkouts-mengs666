@@ -1,3 +1,4 @@
+
 C2 <- libdata %>% 
   group_by(CheckoutMonth) %>% 
   summarise(Checkouttimes = sum(Checkouts))
