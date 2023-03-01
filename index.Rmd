@@ -7,80 +7,87 @@ output: html_document
 
 An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
 
+I chose a dataset that shows books checkout at least 10 times in a month. It includes some variables luke usage class, material type, checkout years and title of the books. I mainly use material type, check out times and usage class as well as years/months to analyze. I want to analyze these data to see the transformation of people's preference. Especially during the past 3 years, people's life has been changed by COVID. I would like to see how this might affect library.
+
+
 ### Summary Information
 
-Write a summary paragraph of findings that includes the 5 values calculated from your summary information R script
 
-These will likely be calculated using your DPLYR skills, answering questions such as:
 
-- What is the average number of checkouts for each item?
-- What is the month or year with the most/least checkouts for a book that you're interested in?
-- What is the month or year with the most/least checkouts for ebooks?
-- How has the number of print book checkouts changed over time?
+> What is the average number of checkouts for August? 
 
-Feel free to calculate and report values that you find relevant.
+-- Value 1: The average number of checkouts in August is 23.39 times
+
+> What is the month or year with the most/least checkouts?
+
+-- Value 2: June is the month with the most checkouts
+-- Value 3: January is the month with the least checkouts
+
+> Which material type was checked out most in August?
+
+-- Value4: Mixed is the time check out most in August.
+
+> Which material type was checked out most?
+
+-- Value 5: Audiobook is the one checked out most.
+
 
 ### The Dataset
 
-- Who collected/published the data?  
-- What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
-- How was the data collected or generated?  
-- Why was the data collected?  
-- What, if any, ethical questions do you need to consider when working with this data?  
-- What are possible limitations or problems with this data?   (at least 200 words)
+> Who collected/published the data?  
+
+Seattle Public Library publish it.
+
+> What are the parameters of the data (dates, number of checkouts, kinds of books, etc.)?
+
+Usage Class, Check Out Type, Material Type, Check Out Year, Check Out Month, Check Outs, Title
+
+> How was the data collected or generated?  
+
+The data was collected from mutiple current and historical sources. It  generated whenever people are renting book in library.
+
+> Why was the data collected?  
+
+This data was collected because library need to keep track each books record. Library need to make sure they know who rent it and when it was rented.
+
+> What, if any, ethical questions do you need to consider when working with this data?  
+
+Probably the problem of privacy when recording a rent. For example, if someone rent  a book and it records his name, will he be recorded a bad credit if he lost it?
+
+> What are possible limitations or problems with this data?   (at least 200 words)
+
+First, the dataset only includes items that have been checked out at least 10 times a month. This means that items that are not popular or that have not been checked out frequently are not included in the dataset. Therefore, the dataset may not be representative of the library's entire collection, and the analysis may miss important insights from less frequently circulated items.
+
+Second, the dataset only includes checkouts from Seattle Public Library. This means that the analysis may not capture the preferences and behaviors of library patrons from other library systems or even within the same system but from different branches. The dataset may also not account for differences in the demographics or socioeconomic status of the patrons who use the library system.
+
+Third, the dataset only includes checkout records, which do not provide information on how many people actually read or used the item or how long they used it. Therefore, the dataset may not accurately reflect the actual usage of the library's collection.
+
+Finally, the dataset only covers the past 5 years, which may not be sufficient to capture long-term trends or changes in patron behavior. Therefore, the analysis should be interpreted with caution and considered as a snapshot of the library's usage at a particular point in time.
 
 
 ### First Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
 
-The first chart that you will create and include will show the trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
+I create this chart to see different materil type's check out times over years. I pick Audio Book,Book, E Book and Video Disc to compare. This pattern shows that Books and Video Discs are originaly  most checked out type in 2017. Then they had a sudden decline during 2019-2020. At that time, Ebook and Audio book both have a great increase in Check out times. So that time was probably the digitalization age where people began abandon books and discs.
 
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
-``````{r, echo = FALSE, warning = FALSE, code = readLines("chart1_example.R")}
+``````{r, echo = FALSE, warning = FALSE}
+Chart1
 ```
 
 ### Second Trends Over Time Chart
 
-Include a chart. Make sure to describe why you included the chart, and what patterns emerged
-
-The second chart that you will create and include will show another trend over time of your variable/topic/interest. Think carefully about what you want to communicate to your user (you may have to find relevant trends in the dataset first!). Here are some requirements to help guide your design:
-
-- Show more than one, but fewer than ~10 trends
-  - For example, two books, or 5 different mediums
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear - legend title
-In your .Rmd file, make sure to describe why you included the chart, and what patterns emerged
-
-When we say "clear" or "human readable" titles and labels, that means that you should not just display the variable name.
-
-Here's an example of how to run an R script inside an RMarkdown file:
-
+This histogram is about the total check out times of each months. We can see that, no matter what kinds of material type, January is the month that significantly has the most checked out times.For other months, it's all about the same times.
+I can see this may probably due to many people make their new year reading plan at the very beginning. So that many people will rent at January and they didn't successfully persist that long. 
 ``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+Chart2
 ```
 
 ### Your Choice
 
-The last chart is up to you. It could be a line plot, scatter plot, histogram, bar plot, stacked bar plot, and more. Here are some requirements to help guide your design:
-
-- You must have clear x and y axis labels
-- The chart needs a clear title 
-- You need a legend for your different line colors and a clear legend title
-
-Here's an example of how to run an R script inside an RMarkdown file:
+This stacked bar chart is analyzing the transition of Usage Class over years. Usage Class contains Digital and Physical ones. We can see from the graph that, at the begining, bigger proportion of usage class is physical. During 2019-2020, Physical usage class has a great decline but digital ones increase a huge proportion. This result actually same with the analysis in Chart 1. I think its also becasue of COVID pandemic. Many people don't want to use physical ones or unable to get physical copy during quarantine. Therefore, everything digitalize during that two years.
 
 ``````{r, echo = FALSE, code = readLines("chart2_example.R")}
+Chart3
 ```
 
 
