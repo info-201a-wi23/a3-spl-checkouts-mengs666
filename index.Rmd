@@ -5,9 +5,19 @@ output: html_document
 
 ### Introduction
 
+
 An introduction of the data and a description of the trends/books/items you are choosing to analyze (and why!)
 
-I chose a dataset that shows books checkout at least 10 times in a month. It includes some variables luke usage class, material type, checkout years and title of the books. I mainly use material type, check out times and usage class as well as years/months to analyze. I want to analyze these data to see the transformation of people's preference. Especially during the past 3 years, people's life has been changed by COVID. I would like to see how this might affect library.
+I chose a dataset that shows books checkout at least 10 times in a month. 
+
+It includes some variables luke usage class, material type, checkout years and title of the books. 
+
+I mainly use material type, check out times and usage class as well as years/months to analyze. 
+
+I want to analyze these data to see the transformation of people's preference. 
+
+Especially during the past 3 years, people's life has been changed by COVID. I would like to see how this might affect library.
+
 
 
 ### Summary Information
@@ -56,19 +66,40 @@ Probably the problem of privacy when recording a rent. For example, if someone r
 
 > What are possible limitations or problems with this data?   (at least 200 words)
 
-First, the dataset only includes items that have been checked out at least 10 times a month. This means that items that are not popular or that have not been checked out frequently are not included in the dataset. Therefore, the dataset may not be representative of the library's entire collection, and the analysis may miss important insights from less frequently circulated items.
+First, the dataset only includes items that have been checked out at least 10 times a month.
 
-Second, the dataset only includes checkouts from Seattle Public Library. This means that the analysis may not capture the preferences and behaviors of library patrons from other library systems or even within the same system but from different branches. The dataset may also not account for differences in the demographics or socioeconomic status of the patrons who use the library system.
+This means that items that are not popular or that have not been checked out frequently are not included in the dataset.
 
-Third, the dataset only includes checkout records, which do not provide information on how many people actually read or used the item or how long they used it. Therefore, the dataset may not accurately reflect the actual usage of the library's collection.
+Therefore, the dataset may not be representative of the library's entire collection, and the analysis may miss important insights from less frequently circulated items.
 
-Finally, the dataset only covers the past 5 years, which may not be sufficient to capture long-term trends or changes in patron behavior. Therefore, the analysis should be interpreted with caution and considered as a snapshot of the library's usage at a particular point in time.
+Second, the dataset only includes checkouts from Seattle Public Library. 
+
+This means that the analysis may not capture the preferences and behaviors of library patrons from other library systems or even within the same system but from different branches. 
+
+The dataset may also not account for differences in the demographics or socioeconomic status of the patrons who use the library system.
+
+Third, the dataset only includes checkout records, which do not provide information on how many people actually read or used the item or how long they used it. 
+
+Therefore, the dataset may not accurately reflect the actual usage of the library's collection.
+
+Finally, the dataset only covers the past 5 years, which may not be sufficient to capture long-term trends or changes in patron behavior. 
+
+Therefore, the analysis should be interpreted with caution and considered as a snapshot of the library's usage at a particular point in time.
 
 
 ### First Trends Over Time Chart
 
+I create this chart to see different materil type's check out times over years.
 
-I create this chart to see different materil type's check out times over years. I pick Audio Book,Book, E Book and Video Disc to compare. This pattern shows that Books and Video Discs are originaly  most checked out type in 2017. Then they had a sudden decline during 2019-2020. At that time, Ebook and Audio book both have a great increase in Check out times. So that time was probably the digitalization age where people began abandon books and discs.
+I pick Audio Book,Book, E Book and Video Disc to compare. 
+
+This pattern shows that Books and Video Discs are originaly  most checked out type in 2017. 
+
+Then they had a sudden decline during 2019-2020. 
+
+At that time, Ebook and Audio book both have a great increase in Check out times. 
+
+So that time was probably the digitalization age where people began abandon books and discs.
 
 ``````{r, echo = FALSE, warning = FALSE}
 Chart1
@@ -76,15 +107,34 @@ Chart1
 
 ### Second Trends Over Time Chart
 
-This histogram is about the total check out times of each months. We can see that, no matter what kinds of material type, January is the month that significantly has the most checked out times.For other months, it's all about the same times.
-I can see this may probably due to many people make their new year reading plan at the very beginning. So that many people will rent at January and they didn't successfully persist that long. 
+This histogram is about the total check out times of each months. 
+
+We can see that, no matter what kinds of material type, January is the month that significantly has the most checked out times.
+
+For other months, it's all about the same times.
+
+I can see this may probably due to many people make their new year reading plan at the very beginning.
+
+So that many people will rent at January and they didn't successfully persist that long. 
 ``````{r, echo = FALSE, code = readLines("chart2_example.R")}
 Chart2
 ```
 
 ### Your Choice
 
-This stacked bar chart is analyzing the transition of Usage Class over years. Usage Class contains Digital and Physical ones. We can see from the graph that, at the begining, bigger proportion of usage class is physical. During 2019-2020, Physical usage class has a great decline but digital ones increase a huge proportion. This result actually same with the analysis in Chart 1. I think its also becasue of COVID pandemic. Many people don't want to use physical ones or unable to get physical copy during quarantine. Therefore, everything digitalize during that two years.
+This stacked bar chart is analyzing the transition of Usage Class over years.
+
+Usage Class contains Digital and Physical ones. 
+
+We can see from the graph that, at the begining, bigger proportion of usage class is physical.
+
+During 2019-2020, Physical usage class has a great decline but digital ones increase a huge proportion. 
+
+This result actually same with the analysis in Chart 1. 
+
+I think its also becasue of COVID pandemic. Many people don't want to use physical ones or unable to get physical copy during quarantine. 
+
+Therefore, everything digitalize during that two years.
 
 ``````{r, echo = FALSE, code = readLines("chart2_example.R")}
 Chart3
